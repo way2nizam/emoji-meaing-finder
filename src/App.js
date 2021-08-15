@@ -7,7 +7,11 @@ const emojiDictionary = {
   "😄": "Grinning Face with Smiling Eyes",
   "😁": "Beaming Face with Smiling Eyes",
   "😆": "Grinning Squinting Face",
-  "😅": "Grinning Face with Sweat"
+  "😅": "Grinning Face with Sweat",
+  "😛": "Face with Tongue or Cheeky",
+  "🥶": "Cold Face or Freezing Face",
+  "🤬": "Face with Symbols on Mouth or Cursing",
+  "🥳": "Partying Face"
 };
 
 var emojiWeKnow = Object.keys(emojiDictionary);
