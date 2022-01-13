@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import "./styles.css";
+import React, { useState } from 'react';
+import './styles.css';
 
 const emojiDictionary = {
-  "😀": "Grinning Face",
-  "😃": "Grinning Face with Big Eyes",
-  "😄": "Grinning Face with Smiling Eyes",
-  "😁": "Beaming Face with Smiling Eyes",
-  "😆": "Grinning Squinting Face",
-  "😅": "Grinning Face with Sweat",
-  "😛": "Face with Tongue or Cheeky",
-  "🥶": "Cold Face or Freezing Face",
-  "🤬": "Face with Symbols on Mouth or Cursing",
-  "🥳": "Partying Face"
+  '😀': 'Grinning Face',
+  '😃': 'Grinning Face with Big Eyes',
+  '😄': 'Grinning Face with Smiling Eyes',
+  '😁': 'Beaming Face with Smiling Eyes',
+  '😆': 'Grinning Squinting Face',
+  '😅': 'Grinning Face with Sweat',
+  '😛': 'Face with Tongue or Cheeky',
+  '🥶': 'Cold Face or Freezing Face',
+  '🤬': 'Face with Symbols on Mouth or Cursing',
+  '🥳': 'Partying Face',
 };
 
-var emojiWeKnow = Object.keys(emojiDictionary);
+const emojiWeKnow = Object.keys(emojiDictionary);
 
-export default function App() {
-  const [meaning, setEmojiMeaning] = useState("insert emoji to check meaning");
+export default () => {
+  const [meaning, setEmojiMeaning] = useState('insert emoji to check meaning');
   function emojiInputHandler(event) {
     var userInput = event.target.value;
     var meaning = emojiDictionary[userInput];
@@ -28,16 +28,16 @@ export default function App() {
     setEmojiMeaning(meaning);
   }
 
-  function emojiClickHandler(emoji) {
+  const emojiClickHandler = (emoji) => {
     var meaning = emojiDictionary[emoji];
     setEmojiMeaning(meaning);
-  }
+  };
 
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Inside Out</h1>
       <input onChange={emojiInputHandler} />
-      <div style={{ padding: "0.5rem" }}>{meaning}</div>
+      <div style={{ padding: '0.5rem' }}>{meaning}</div>
 
       <h3>click on the emoji to check the meaning </h3>
 
@@ -45,13 +45,12 @@ export default function App() {
         return (
           <span
             onClick={() => emojiClickHandler(emoji)}
-            style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
-            key={emoji}
-          >
+            style={{ fontSize: '2rem', padding: '0.5rem', cursor: 'pointer' }}
+            key={emoji}>
             {emoji}
           </span>
         );
       })}
     </div>
   );
-}
+};
