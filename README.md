@@ -2,4 +2,4 @@
 
 ReactJS app hosted on Code Sandbox to find the emoji meaning just by inserting the emoji or by clicking the emoji
 
-## Demo Link: https://nkv4t.csb.app/
+## Demo Link: https://emoji-meaning-finder.netlify.app/
